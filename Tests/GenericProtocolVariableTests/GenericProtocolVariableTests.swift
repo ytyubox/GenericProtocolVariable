@@ -1,11 +1,25 @@
-    import XCTest
-    @testable import GenericProtocolVariable
+import GenericProtocolVariable
+import XCTest
 
-    final class GenericProtocolVariableTests: XCTestCase {
-        func testExample() {
-            // This is an example of a functional test case.
-            // Use XCTAssert and related functions to verify your tests produce the correct
-            // results.
-            XCTAssertEqual(GenericProtocolVariable().text, "Hello, World!")
-        }
+// MARK: - GenericProtocolVariableTests
+
+final class GenericProtocolVariableTests: XCTestCase {
+    func testGrammerFit() {
+        let intGeneric: AnyGeneric<Int> = TestingGeneric(1).eraseToAnyGeneric()
+        XCTAssertEqual(intGeneric.getter(), 1)
     }
+}
+
+// MARK: - TestingGeneric
+
+private struct TestingGeneric: Generic {
+    init(_ anyType: AnyType) {
+        self.anyType = anyType
+    }
+
+    typealias AnyType = Int
+    private let anyType: AnyType
+    func getter() -> AnyType {
+        anyType
+    }
+}
