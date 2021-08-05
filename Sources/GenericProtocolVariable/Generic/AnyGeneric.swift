@@ -9,7 +9,7 @@
 
 // MARK: - AbstractClass
 
-class AbstractClass<AnyType>: Generic {
+private class AbstractClass<AnyType>: Generic {
     func getter() -> AnyType {
         abstractFunction()
     }
@@ -17,7 +17,7 @@ class AbstractClass<AnyType>: Generic {
 
 // MARK: - AnyGenericContainer
 
-final class AnyGenericContainer<GenericType: Generic>: AbstractClass<GenericType.AnyType> {
+private final class AnyGenericContainer<GenericType: Generic>: AbstractClass<GenericType.AnyType> {
     private let wrappedValue: GenericType
 
     init(_ wrappedValue: GenericType) {
