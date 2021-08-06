@@ -256,3 +256,4 @@ extension Generic {
 To be honest, I did not came out this idea by my self, I have study a lot of open source code and have I personal opinion on it. Wish you enjoy reading this, and feel free to share, comment. 
 
 
+> BTW, there is `AnyEquatable` is the source code, go digging, go, go, go.
