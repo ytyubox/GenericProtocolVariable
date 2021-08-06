@@ -10,7 +10,6 @@
 import GenericProtocolVariable
 import XCTest
 
-
 // MARK: - Tests
 
 final class Tests: XCTestCase {

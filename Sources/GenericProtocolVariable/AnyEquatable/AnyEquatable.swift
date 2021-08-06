@@ -14,11 +14,11 @@ class ABSClass: Equatable {
         Self.isEqual(lhs: lhs, rhs: rhs)
     }
 
-    class func isEqual(lhs: ABSClass, rhs: ABSClass) -> Bool {
+    class func isEqual(lhs _: ABSClass, rhs _: ABSClass) -> Bool {
         abstractFunction()
     }
 
-    func isEqual(to other: ABSClass) -> Bool {
+    func isEqual(to _: ABSClass) -> Bool {
         abstractFunction()
     }
 }

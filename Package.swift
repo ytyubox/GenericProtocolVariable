@@ -7,8 +7,11 @@ let package = Package(
     targets: [
         .target(
             name: "GenericProtocolVariable",
-            dependencies: []),
+            dependencies: []
+        ),
         .testTarget(
             name: "GenericProtocolVariableTests",
-            dependencies: ["GenericProtocolVariable"]),
-    ])
+            dependencies: ["GenericProtocolVariable"]
+        ),
+    ]
+)

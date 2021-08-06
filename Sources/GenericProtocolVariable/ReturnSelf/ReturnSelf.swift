@@ -7,7 +7,7 @@
  *		Running on macOS 12.0
  */
 
-public protocol Generic {
-    associatedtype AnyType
-    func getter() -> AnyType
+public protocol ReturnSelf {
+    static func dequeue() -> ReturnSelf
+    var name: String { get }
 }

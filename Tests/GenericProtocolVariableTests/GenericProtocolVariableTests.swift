@@ -14,13 +14,13 @@ final class GenericProtocolVariableTests: XCTestCase {
 
 private struct TestingGeneric: Generic {
     private let anyType: AnyType
-    
+
     init(_ anyType: AnyType) {
         self.anyType = anyType
     }
 
     typealias AnyType = Int
-    
+
     func getter() -> AnyType {
         anyType
     }
