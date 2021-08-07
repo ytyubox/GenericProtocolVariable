@@ -234,7 +234,7 @@ struct AnyGeneric<AnyType>:Generic {
     
     init<G:Generic>(wrappedGeneric: G) where G.AnyType == AnyType {
       if let erased = wrappedGeneric as? AnyGeneric<AnyType> {
-            box = erased.box
+            self = erased
         } else {
             box = AnyGenericContainer(wrappedGeneric)
         }

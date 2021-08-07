@@ -36,7 +36,7 @@ public struct AnyGeneric<AnyType>: Generic {
 
     public init<GenericType: Generic>(_ generic: GenericType) where AnyType == GenericType.AnyType {
         if let erased = generic as? AnyGeneric<AnyType> {
-            box = erased.box
+            self = erased
         } else {
             box = AnyGenericContainer(generic)
         }
